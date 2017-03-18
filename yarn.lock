@@ -2264,13 +2264,12 @@ ember-wormhole@^0.4.1:
     ember-cli-babel "^5.1.6"
     ember-cli-htmlbars "^1.0.3"
 
-emblem@0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/emblem/-/emblem-0.8.0.tgz#55d5949984df53ef05a388a28226c69d47c7f909"
+emblem@0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/emblem/-/emblem-0.9.0.tgz#730cb5f291e540fd42a43034df51ffebfcdb5142"
   dependencies:
     handlebars "^2.0.0"
     optimist "^0.3.7"
-    uglify-js "^1.2.6"
 
 emblem@^0.8.1:
   version "0.8.2"
@@ -5999,10 +5998,6 @@ typedarray@^0.0.6, typedarray@~0.0.5:
 uc.micro@^1.0.0, uc.micro@^1.0.1, uc.micro@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/uc.micro/-/uc.micro-1.0.3.tgz#7ed50d5e0f9a9fb0a573379259f2a77458d50192"
-
-uglify-js@^1.2.6:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-1.3.5.tgz#4b5bfff9186effbaa888e4c9e94bd9fc4c94929d"
 
 uglify-js@^2.6, uglify-js@^2.7.0:
   version "2.8.13"
