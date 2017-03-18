@@ -1,0 +1,22 @@
+.row
+  .col-md-6
+    .input
+      = one-way-textarea update=(action 'textChanged')
+
+  .col-md-6
+    .results class={ if error 'error' }
+      = if loading
+        .add-spinner Loading...
+
+      = if compiler.lastError
+        .error ERROR: {{ compiler.lastError }}
+
+      = else if result
+        pre = result
+
+      = else
+        .placeholder
+          h3 A little Ember app to allow a live preview of Emblem code.
+
+
+    em Emblem Version #{ compiler.version }

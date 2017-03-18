@@ -1,34 +1,33 @@
-import Ember from 'ember';
-import Emblem from 'emblem';
+import Component from 'ember-component';
+import service from 'ember-service/inject';
+import { isBlank } from 'ember-utils';
 
-export default Ember.Component.extend({
-  emblem: null,
-  compiled: null,
-  error: false,
+export default Component.extend({
+  result: null,
 
-  compileEmblem: function(){
-    let component = this;
-    let emblem = this.get('emblem');
+  compiler: service('compiler'),
 
-    if (!emblem) { return; }
-    if (this.get('loading')) { return; }
+  loading: false,
 
-    this.setProperties({
-      compiled: null,
-      error: false
-    });
+  actions: {
+    textChanged(value) {
+      const compiler = this.get('compiler');
 
-    return Ember.RSVP.resolve().then( () => {
-      let compiled = Emblem.compile(emblem);
-      compiled.replace(/</g, '&gt;').
-               replace(/>/g, '&lt;');
-      component.set('compiled', compiled);
-    }).catch(function(e){
-      if (e.status === 422) {
-        component.set('error', e.responseJSON.message);
-      } else {
-        component.set('error', e.message);
+      if (this.get('loading')) {
+        return;
       }
-    });
-  }.observes('emblem')
+
+      this.setProperties({
+        loading: true,
+        result: null
+      });
+
+      const result = compiler.compile(value);
+
+      this.setProperties({
+        loading: false,
+        result
+      });
+    }
+  },
 });

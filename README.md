@@ -1,3 +1,3 @@
 # Emblem-preview
 
-Run the API from https://github.com/bantic/emblem-preview-api
+Forked from https://github.com/bantic/try-emblem

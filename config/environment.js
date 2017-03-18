@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'emblem-preview',
     environment: environment,
-    baseURL: '/emblem-preview',
+    rootURL: '/emblem-preview',
     locationType: 'hash',
 
     EmberENV: {
@@ -30,7 +30,7 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.baseURL = '/';
+    ENV.rootURL = '/';
     ENV.locationType = 'none';
 
     // keep test console output quieter
