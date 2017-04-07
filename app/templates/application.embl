@@ -8,7 +8,7 @@
 
   .emblem-preview
     .container
-      = emblem-preview
+      = emblem-preview result=result
 
   .footer
     .container
