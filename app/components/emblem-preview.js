@@ -1,33 +1,48 @@
 import Component from 'ember-component';
 import service from 'ember-service/inject';
-import { isBlank } from 'ember-utils';
+import { isBlank, isPresent } from 'ember-utils';
 
 export default Component.extend({
   result: null,
+  code: null,
 
   compiler: service('compiler'),
 
   loading: false,
 
-  actions: {
-    textChanged(value) {
-      const compiler = this.get('compiler');
+  didInsertElement() {
+    const code = this.get('code');
 
-      if (this.get('loading')) {
-        return;
-      }
-
-      this.setProperties({
-        loading: true,
-        result: null
-      });
-
-      const result = compiler.compile(value);
-
-      this.setProperties({
-        loading: false,
-        result
-      });
+    if (isPresent(code)) {
+      this._compileText(code);
     }
   },
+
+  actions: {
+    textChanged(value) {
+      this._compileText(value);
+
+      this.set('code', value);
+    }
+  },
+
+  _compileText(text) {
+    const compiler = this.get('compiler');
+
+    if (this.get('loading')) {
+      return;
+    }
+
+    this.setProperties({
+      loading: true,
+      result: null
+    });
+
+    const result = compiler.compile(text);
+
+    this.setProperties({
+      loading: false,
+      result
+    });
+  }
 });

@@ -1,7 +1,7 @@
 .row
   .col-md-6
     .input
-      = one-way-textarea update=(action 'textChanged')
+      = one-way-textarea update=(action 'textChanged') value=code
 
   .col-md-6
     .results class={ if error 'error' }
@@ -12,7 +12,7 @@
         .error ERROR: {{ compiler.lastError }}
 
       = else if result
-        pre = result
+        pre style='white-space: pre-wrap;' = result
 
       = else
         .placeholder

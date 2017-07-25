@@ -1878,14 +1878,16 @@ ember-cli-dependency-checker@1.3.0:
     is-git-url "0.2.0"
     semver "^4.1.0"
 
-ember-cli-emblem@^0.8.0:
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-emblem/-/ember-cli-emblem-0.8.1.tgz#6562bd5ae63794d3d00a4fb95bf755b14885d17a"
+ember-cli-emblem@^0.9.1:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-emblem/-/ember-cli-emblem-0.9.0.tgz#0f0e4c70b4f3ebf49a5376713d7deaec4f3f57cb"
   dependencies:
     broccoli-filter "^1.2.2"
+    ember-cli-legacy-blueprints "^0.1.1"
     ember-cli-version-checker "^1.0.2"
-    emblem "^0.8.1"
-    lodash "^3.6.0"
+    emblem "^0.9.0"
+    lodash.assign "^4.2.0"
+    lodash.defaults "^4.2.0"
 
 ember-cli-eslint@^1.3.0:
   version "1.8.0"
@@ -1933,7 +1935,7 @@ ember-cli-is-package-missing@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ember-cli-is-package-missing/-/ember-cli-is-package-missing-1.0.0.tgz#6e6184cafb92635dd93ca6c946b104292d4e3390"
 
-ember-cli-legacy-blueprints@^0.1.2:
+ember-cli-legacy-blueprints@^0.1.1, ember-cli-legacy-blueprints@^0.1.2:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/ember-cli-legacy-blueprints/-/ember-cli-legacy-blueprints-0.1.4.tgz#83d6c005ac0e39750ff9dd45cd1b78cf697150c6"
   dependencies:
@@ -2264,16 +2266,9 @@ ember-wormhole@^0.4.1:
     ember-cli-babel "^5.1.6"
     ember-cli-htmlbars "^1.0.3"
 
-emblem@0.9.0:
+emblem@0.9.0, emblem@^0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/emblem/-/emblem-0.9.0.tgz#730cb5f291e540fd42a43034df51ffebfcdb5142"
-  dependencies:
-    handlebars "^2.0.0"
-    optimist "^0.3.7"
-
-emblem@^0.8.1:
-  version "0.8.2"
-  resolved "https://registry.yarnpkg.com/emblem/-/emblem-0.8.2.tgz#44d133e8347398892d59ef51206433b2ef8e47d5"
   dependencies:
     handlebars "^2.0.0"
     optimist "^0.3.7"
@@ -3916,6 +3911,10 @@ lodash.debounce@^3.1.1:
   dependencies:
     lodash._getnative "^3.0.0"
 
+lodash.defaults@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/lodash.defaults/-/lodash.defaults-4.2.0.tgz#d09178716ffea4dde9e5fb7b37f6f0802274580c"
+
 lodash.find@^4.5.1:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.find/-/lodash.find-4.6.0.tgz#cb0704d47ab71789ffa0de8b97dd926fb88b13b1"
@@ -4044,7 +4043,7 @@ lodash.without@~4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.without/-/lodash.without-4.4.0.tgz#3cd4574a00b67bae373a94b748772640507b7aac"
 
-lodash@^3.10.0, lodash@^3.10.1, lodash@^3.6.0, lodash@^3.9.3:
+lodash@^3.10.0, lodash@^3.10.1, lodash@^3.9.3:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
